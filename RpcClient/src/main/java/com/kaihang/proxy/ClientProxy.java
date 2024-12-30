@@ -15,11 +15,14 @@ public class ClientProxy implements InvocationHandler {
     public ClientProxy(String host, int port, int choose) {
         switch (choose){
             case 0:
-                rpcClient = new NettyRpcClient(host, port);
+                rpcClient = new NettyRpcClient();
                 break;
             case 1:
                 rpcClient =  new IOClient(host, port);
         }
+    }
+    public ClientProxy(){
+        rpcClient = new NettyRpcClient();
     }
 
     @Override//jdk动态代理

@@ -2,9 +2,10 @@ package com.kaihang.rpcClient.impl;
 
 import com.kaihang.common.RpcRequest;
 import com.kaihang.common.RpcResponse;
-import com.kaihang.netty.handler.NettyClientHandler;
 import com.kaihang.netty.nettyInitializer.NettyClientInitializer;
 import com.kaihang.rpcClient.RpcClient;
+import com.kaihang.serviceCenter.ServiceCenter;
+import com.kaihang.serviceCenter.ZKServiceCenter;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelFuture;
@@ -13,15 +14,15 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.util.AttributeKey;
 
+import java.net.InetSocketAddress;
+
 public class NettyRpcClient implements RpcClient {
-    private String host;
-    private int port;
     private static final Bootstrap bootstrap;
     private static final EventLoopGroup eventLoopGroup;
+    private ServiceCenter serviceCenter;
 
-    public NettyRpcClient(String host, int port) {
-        this.host = host;
-        this.port = port;
+    public NettyRpcClient() {
+        this.serviceCenter = new ZKServiceCenter();
     }
     static {
         eventLoopGroup = new NioEventLoopGroup();
@@ -33,6 +34,10 @@ public class NettyRpcClient implements RpcClient {
 
     @Override
     public RpcResponse sendRequest(RpcRequest request) {
+        //获取请求地址的代码
+        InetSocketAddress address = serviceCenter.serviceDiscovery(request.getInterfaceName());
+        String host = address.getHostName();
+        int port = address.getPort();
         try{
             //创建一个channelFuture对象，代表这一个操作事件，sync堵塞直到connect完成
             //bootstrap为netty的启动类

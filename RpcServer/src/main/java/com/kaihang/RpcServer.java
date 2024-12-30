@@ -14,7 +14,7 @@ import com.kaihang.service.serviceImpl.UserServiceImpl;
 public class RpcServer {
     public static void main( String[] args ) {
         UserService userService = new UserServiceImpl();
-        ServiceProvider serviceProvider = new ServiceProvider();
+        ServiceProvider serviceProvider = new ServiceProvider("127.0.0.1", 9999);
         serviceProvider.provideServiceInterface(userService);
         ServerInterface rpcServer = new NettyRPCServer(serviceProvider);
         rpcServer.start(9999);

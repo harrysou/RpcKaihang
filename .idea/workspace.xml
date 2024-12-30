@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2673bec6-3bd8-4cb8-849e-77a608227ac9" name="Changes" comment="" />
+    <list default="true" id="2673bec6-3bd8-4cb8-849e-77a608227ac9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/RpcClient/src/main/java/com/kaihang/serviceCenter/ServiceCenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RpcClient/src/main/java/com/kaihang/serviceCenter/ZKServiceCenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RpcServer/src/main/java/com/kaihang/serviceRegister/Impl/ZKServiceRegister.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RpcServer/src/main/java/com/kaihang/serviceRegister/ServiceRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RpcClient/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/RpcClient/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RpcClient/src/main/java/com/kaihang/RpcClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/RpcClient/src/main/java/com/kaihang/RpcClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RpcClient/src/main/java/com/kaihang/proxy/ClientProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/RpcClient/src/main/java/com/kaihang/proxy/ClientProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RpcClient/src/main/java/com/kaihang/rpcClient/impl/NettyRpcClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/RpcClient/src/main/java/com/kaihang/rpcClient/impl/NettyRpcClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RpcServer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/RpcServer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RpcServer/src/main/java/com/kaihang/RpcServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/RpcServer/src/main/java/com/kaihang/RpcServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RpcServer/src/main/java/com/kaihang/provider/ServiceProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/RpcServer/src/main/java/com/kaihang/provider/ServiceProvider.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,37 +32,48 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "harrysou"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/harrysou/RpcKaihang.git",
+    "accountId": "8aefeae8-2388-4526-bbd9-d26a97514051"
+  }
+}]]></component>
   <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
   <component name="KubernetesApiProvider"><![CDATA[{
   "isMigrated": true
 }]]></component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="customMavenHome" value="/Library/Maven" />
-        <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2qVwacYGtPKP5L1STIOht5lPBop" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.RpcClient.executor": "Debug",
+    "Application.RpcClient.executor": "Run",
     "Application.RpcServer.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "Maven.RpcClient [install].executor": "Run",
     "Maven.RpcServer [clean].executor": "Run",
     "Maven.RpcServer [install].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/harry/Documents/Master/Projects/RpcKaihang/RpcServer/src/main/java/com/kaihang",
+    "last_opened_file_path": "/Users/harry/Documents/Master/Projects/RpcKaihang/RpcClient/src/main/java/com/kaihang",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -63,6 +88,7 @@
       <recent name="com.kaihang.impl" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/RpcClient/src/main/java/com/kaihang" />
       <recent name="$PROJECT_DIR$/RpcServer/src/main/java/com/kaihang" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -123,12 +149,23 @@
       <workItem from="1735117322436" duration="7822000" />
       <workItem from="1735204707168" duration="1247000" />
       <workItem from="1735207215658" duration="6649000" />
-      <workItem from="1735217161392" duration="18581000" />
+      <workItem from="1735217161392" duration="27891000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
