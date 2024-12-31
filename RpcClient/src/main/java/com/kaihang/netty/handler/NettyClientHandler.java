@@ -1,6 +1,6 @@
 package com.kaihang.netty.handler;
 
-import com.kaihang.common.RpcResponse;
+import com.kaihang.common.message.RpcResponse;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.util.AttributeKey;

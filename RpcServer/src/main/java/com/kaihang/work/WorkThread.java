@@ -1,7 +1,7 @@
 package com.kaihang.work;
 
-import com.kaihang.common.RpcRequest;
-import com.kaihang.common.RpcResponse;
+import com.kaihang.common.message.RpcRequest;
+import com.kaihang.common.message.RpcResponse;
 import com.kaihang.provider.ServiceProvider;
 import lombok.AllArgsConstructor;
 

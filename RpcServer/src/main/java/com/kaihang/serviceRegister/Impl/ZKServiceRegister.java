@@ -31,9 +31,9 @@ public class ZKServiceRegister implements ServiceRegister {
             if(client.checkExists().forPath("/" + serviceName) == null){
                 //creating parents if needed同时创建父类节点若不存在
                 client.create().creatingParentsIfNeeded().withMode(CreateMode.PERSISTENT).forPath("/" + serviceName);
-                String path = "/" + serviceName + "/" + getServiceAddress(serviceAddress);
-                client.create().creatingParentsIfNeeded().withMode(CreateMode.EPHEMERAL).forPath(path);
             }
+            String path = "/" + serviceName + "/" + getServiceAddress(serviceAddress);
+            client.create().creatingParentsIfNeeded().withMode(CreateMode.EPHEMERAL).forPath(path);
         }catch (Exception e){
             e.printStackTrace();
             System.out.println("此服务已存在");

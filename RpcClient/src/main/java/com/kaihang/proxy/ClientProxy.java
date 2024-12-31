@@ -1,8 +1,8 @@
 package com.kaihang.proxy;
 
 import com.kaihang.rpcClient.impl.IOClient;
-import com.kaihang.common.RpcRequest;
-import com.kaihang.common.RpcResponse;
+import com.kaihang.common.message.RpcRequest;
+import com.kaihang.common.message.RpcResponse;
 import com.kaihang.rpcClient.RpcClient;
 import com.kaihang.rpcClient.impl.NettyRpcClient;
 

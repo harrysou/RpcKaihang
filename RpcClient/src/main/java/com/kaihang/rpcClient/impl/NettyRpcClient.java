@@ -1,7 +1,7 @@
 package com.kaihang.rpcClient.impl;
 
-import com.kaihang.common.RpcRequest;
-import com.kaihang.common.RpcResponse;
+import com.kaihang.common.message.RpcRequest;
+import com.kaihang.common.message.RpcResponse;
 import com.kaihang.netty.nettyInitializer.NettyClientInitializer;
 import com.kaihang.rpcClient.RpcClient;
 import com.kaihang.serviceCenter.ServiceCenter;

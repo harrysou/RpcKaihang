@@ -1,7 +1,7 @@
 package com.kaihang.netty.handler;
 
-import com.kaihang.common.RpcRequest;
-import com.kaihang.common.RpcResponse;
+import com.kaihang.common.message.RpcRequest;
+import com.kaihang.common.message.RpcResponse;
 import com.kaihang.provider.ServiceProvider;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
