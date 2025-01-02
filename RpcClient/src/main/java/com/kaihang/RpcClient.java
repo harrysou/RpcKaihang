@@ -16,7 +16,7 @@ import java.util.Random;
  *
  */
 public class RpcClient {
-    public static void main( String[] args ) {
+    public static void main( String[] args ) throws InterruptedException {
         ClientProxy clientProxy = new ClientProxy();
 //        ClientProxy clientProxy = new ClientProxy("127.0.0.1", 9999,0);
         UserService proxy = clientProxy.getProxy(UserService.class);

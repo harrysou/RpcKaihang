@@ -4,37 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2673bec6-3bd8-4cb8-849e-77a608227ac9" name="Changes" comment="新增zookeeper配置">
-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RpcClient/src/main/java/com/kaihang/common/message/MessageType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RpcClient/src/main/java/com/kaihang/common/serializer/myCode/MyDecoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RpcClient/src/main/java/com/kaihang/common/serializer/myCode/MyEncoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RpcClient/src/main/java/com/kaihang/common/serializer/mySerializer/JsonSerializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RpcClient/src/main/java/com/kaihang/common/serializer/mySerializer/ObjectSerializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RpcClient/src/main/java/com/kaihang/common/serializer/mySerializer/Serializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RpcServer/src/main/java/com/kaihang/common/message/MessageType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RpcServer/src/main/java/com/kaihang/common/serializer/myCode/MyDecoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RpcServer/src/main/java/com/kaihang/common/serializer/myCode/MyEncoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RpcServer/src/main/java/com/kaihang/common/serializer/mySerializer/JsonSerializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RpcServer/src/main/java/com/kaihang/common/serializer/mySerializer/ObjectSerializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RpcServer/src/main/java/com/kaihang/common/serializer/mySerializer/Serializer.java" afterDir="false" />
+    <list default="true" id="2673bec6-3bd8-4cb8-849e-77a608227ac9" name="Changes" comment="新增自定义Netty编码器，解码器和序列器，反序列器">
+      <change afterPath="$PROJECT_DIR$/RpcClient/src/main/java/com/kaihang/cache/ServiceCache.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RpcClient/src/main/java/com/kaihang/serviceCenter/ZkWatcher/WatchZK.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RpcClient/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/RpcClient/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RpcClient/src/main/java/com/kaihang/common/RpcRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/RpcClient/src/main/java/com/kaihang/common/message/RpcRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RpcClient/src/main/java/com/kaihang/common/RpcResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/RpcClient/src/main/java/com/kaihang/common/message/RpcResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RpcClient/src/main/java/com/kaihang/netty/handler/NettyClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/RpcClient/src/main/java/com/kaihang/netty/handler/NettyClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RpcClient/src/main/java/com/kaihang/netty/nettyInitializer/NettyClientInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/RpcClient/src/main/java/com/kaihang/netty/nettyInitializer/NettyClientInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RpcClient/src/main/java/com/kaihang/RpcClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/RpcClient/src/main/java/com/kaihang/RpcClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RpcClient/src/main/java/com/kaihang/proxy/ClientProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/RpcClient/src/main/java/com/kaihang/proxy/ClientProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RpcClient/src/main/java/com/kaihang/rpcClient/RpcClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/RpcClient/src/main/java/com/kaihang/rpcClient/RpcClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RpcClient/src/main/java/com/kaihang/rpcClient/impl/IOClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/RpcClient/src/main/java/com/kaihang/rpcClient/impl/IOClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RpcClient/src/main/java/com/kaihang/rpcClient/impl/NettyRpcClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/RpcClient/src/main/java/com/kaihang/rpcClient/impl/NettyRpcClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RpcServer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/RpcServer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RpcServer/src/main/java/com/kaihang/common/RpcRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/RpcServer/src/main/java/com/kaihang/common/message/RpcRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RpcServer/src/main/java/com/kaihang/common/RpcResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/RpcServer/src/main/java/com/kaihang/common/message/RpcResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RpcServer/src/main/java/com/kaihang/netty/handler/NettyServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/RpcServer/src/main/java/com/kaihang/netty/handler/NettyServerHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RpcServer/src/main/java/com/kaihang/netty/nettyInitializer/NettyServerInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/RpcServer/src/main/java/com/kaihang/netty/nettyInitializer/NettyServerInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RpcServer/src/main/java/com/kaihang/serviceRegister/Impl/ZKServiceRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/RpcServer/src/main/java/com/kaihang/serviceRegister/Impl/ZKServiceRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RpcServer/src/main/java/com/kaihang/work/WorkThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/RpcServer/src/main/java/com/kaihang/work/WorkThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RpcClient/src/main/java/com/kaihang/serviceCenter/ZKServiceCenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/RpcClient/src/main/java/com/kaihang/serviceCenter/ZKServiceCenter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +148,7 @@
       <workItem from="1735117322436" duration="7822000" />
       <workItem from="1735204707168" duration="1247000" />
       <workItem from="1735207215658" duration="6649000" />
-      <workItem from="1735217161392" duration="41448000" />
+      <workItem from="1735217161392" duration="51529000" />
     </task>
     <task id="LOCAL-00001" summary="新增zookeeper配置">
       <option name="closed" value="true" />
@@ -181,7 +158,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735563224168</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="新增自定义Netty编码器，解码器和序列器，反序列器">
+      <option name="closed" value="true" />
+      <created>1735652475420</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1735652475420</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,7 +185,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="新增zookeeper配置" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增zookeeper配置" />
+    <MESSAGE value="新增自定义Netty编码器，解码器和序列器，反序列器" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增自定义Netty编码器，解码器和序列器，反序列器" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
