@@ -40,7 +40,9 @@ public class ServiceCache {
     //删除地址
     public void removeServiceFromCache(String serviceName, String address) {
         List<String> addressList = cache.get(serviceName);
-        addressList.remove(address);
-        System.out.println("将name为" + serviceName + "和地址为" + address + "的服务从本地缓存中删除");
+        if(addressList != null) {
+            addressList.remove(address);
+            System.out.println("将name为" + serviceName + "和地址为" + address + "的服务从本地缓存中删除");
+        }
     }
 }

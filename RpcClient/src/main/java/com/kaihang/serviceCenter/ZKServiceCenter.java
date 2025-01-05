@@ -2,6 +2,8 @@ package com.kaihang.serviceCenter;
 
 import com.kaihang.cache.ServiceCache;
 import com.kaihang.serviceCenter.ZkWatcher.WatchZK;
+import com.kaihang.serviceCenter.balance.LoadBalance;
+import com.kaihang.serviceCenter.balance.impl.ConsistencyHashBalance;
 import org.apache.curator.RetryPolicy;
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.CuratorFrameworkFactory;
@@ -15,6 +17,7 @@ public class ZKServiceCenter implements ServiceCenter{
     private CuratorFramework client;
     //zookeeper根路径节点
     private static final String ROOT_PATH = "MyRpc";
+    private static final String RETRY = "CanRetry";
     private ServiceCache cache;
 
     public ZKServiceCenter() throws InterruptedException {
@@ -42,13 +45,32 @@ public class ZKServiceCenter implements ServiceCenter{
             if(strings == null){
                 strings = client.getChildren().forPath( "/" + serviceName);
             }
-            //默认第一个
-            String string = strings.get( 0 );
-            return parseAddress(string);
+            //默认第一个，后面加负载均衡(zookeeper里可能一个服务有多个地址都能实现)
+//            String string = strings.get( 0 );
+            LoadBalance loadBalance = new ConsistencyHashBalance();
+            String address = loadBalance.balance(strings);
+            return parseAddress(address);
         }catch (Exception e){
             e.printStackTrace();
         }
         return null;
+    }
+
+    @Override
+    public boolean checkRetry(String serviceName) {
+        boolean canRetry = false;
+        try{
+            List<String> serviceList = client.getChildren().forPath("/" + RETRY);
+            for(String service:serviceList){
+                if(service.equals(serviceName)){
+                    System.out.println("服务"+ serviceName + "在白名单上，可进行重试");
+                    canRetry = true;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return canRetry;
     }
 
     private String getServiceAddress(InetSocketAddress serverAddress){
